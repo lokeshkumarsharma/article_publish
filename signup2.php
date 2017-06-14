@@ -9,7 +9,7 @@ $pass=$_POST['pass'];
 #$sql = 'insert into cms_users values("' . mysql_real_escape_string($email, $db) . '",
 #PASSWORD("' . mysql_real_escape_string($pass, $db) . '"),
 #$"' . mysql_real_escape_string($name, $db) . '")';
-$sql = "insert into cms_users(email, password, name) values ('$email', '$pass', '$name')";
+$sql = "insert into cms_users(email, password,name) values ('$email', '$pass','$name')";
 mysql_query($sql, $db) or die(mysql_error($db));
 
 

@@ -1,3 +1,4 @@
+
 <?php
 $db=mysql_connect('localhost','root','');
 mysql_select_db('kavd',$db);
@@ -25,6 +26,7 @@ if($name=='admin' && $email=='administrator')
 		
 		header('Location: /admin1.php');
 	}
+	
 	
 else{
 	

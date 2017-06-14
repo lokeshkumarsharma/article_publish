@@ -16,17 +16,18 @@ $row= mysql_fetch_array($result);
 
 ?>
 <html>
+<body background="bg-body.jpg">
 <form method="post" action="articles1.php">
 
-<p>TITLE:-<?php echo $row['title'];?></p>
+<p style="font-size:30px; font-family:comic Sans MS; color:blue;">TITLE:-<?php echo $row['title'];?></p>
 <input type="hidden" name="title" value="<?php echo $row['title'] ;?>"/>
-<p>TEXT:-</p>
-<p> <textarea rows="20" cols="60" name="textarea"> <?php echo $row['article_text'] ;?> </textarea></p>
+<p style="font-size:30px; font-family:comic Sans MS; color:blue;">TEXT:-</p>
+<p> <textarea name="textarea" rows="25" cols="100" style="font-family:comic Sans MS;color:#404040;font-size:20px; white-space:pre-wrap" name="textarea"> <?php echo $row['article_text'];?> </textarea></p>
 <p><input type="submit" name="submit" value="publish article"></p>
 </form>
 <form method="get" action="delete1.php">
 <input type="hidden" name="pending" value="<?php echo $pend ;?>"/>
 <input type="submit" name="Delete Artical" value="Delete">
 </form>
-
+</body>
 </html> 
