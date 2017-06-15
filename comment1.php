@@ -9,7 +9,8 @@ $sql = "insert into cms_comment (article_id,comment_text) values('$article','$co
 mysql_query($sql,$db) or die(mysql_error($db));
 if(mysql_insert_id($db))
 {
-       header('Location: /articles2.php');
+		include('articles2.php');
+       #header('Location: /trial/articles2.php');
 
 }
 ?>

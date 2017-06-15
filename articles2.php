@@ -1,5 +1,10 @@
+<html>
+<head>
+<meta charset="utf-8">
+<body background="bg-body.jpg">
+
 <?php
-session_start();
+#session_start();
 $db=mysql_connect('localhost','root','');
 mysql_select_db('kavd',$db);
 
@@ -9,11 +14,11 @@ $row = mysql_fetch_array($result);
 while($row)
 {
 	echo'<form method="post" action="comment1.php">';
-	echo'TITLE :-';
-	echo $row['title'];
-	echo'<br/>';
-	echo'TEXT :-';
-	echo $row['article_text'];
+	echo'<a style="font-size:25px; font-family:Lucida Console; color:blue;">TITLE :-</a>';
+	echo '<a style="font-family:comic Sans MS;color:black;font-size:20px; white-space:pre-wrap">'.$row['title'].'</a>';
+	echo '<p> </p>';
+	echo'<a style="font-size:30px; font-family:Lucida Console; color:blue;">TEXT :-</a>';
+	echo'<a style="font-family:comic Sans MS;color:black;font-size:15px; white-space:pre-wrap">'.$row['article_text'].'</a>';
 	echo'<br/>';
 	echo'<br/>';
 	echo'<br/>';
@@ -31,3 +36,5 @@ while($row)
 	
 }
 ?>
+</body>
+</html>

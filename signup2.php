@@ -16,8 +16,8 @@ mysql_query($sql, $db) or die(mysql_error($db));
 echo 'Successfully';
 session_start();
 $_SESSION['user_id'] = mysql_insert_id($db);
-print_r($_SESSION);
+#print_r($_SESSION);
 $_SESSION['name'] = $name;
-
-header('Location: /main1.php');
+include('main1.php');
+#header('Location: /trial/main1.php');
 ?>

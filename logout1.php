@@ -1,5 +1,6 @@
 <?php
 session_unset();
 session_destroy();
-header('Location: /index1.php');
+include('index1.php');
+header('Location: /trial/index1.php');
 ?>
