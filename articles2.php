@@ -4,7 +4,7 @@
 <body background="bg-body.jpg">
 
 <?php
-#session_start();
+session_start();
 $db=mysql_connect('localhost','root','');
 mysql_select_db('kavd',$db);
 
